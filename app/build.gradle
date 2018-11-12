@@ -24,17 +24,17 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        web {
+        haracters {
             dimension "releaseType"
             applicationId "ru.lopav.kzn.websiteapp"
-            buildConfigField 'String', 'URL', '"http://yandex.ru"'
-            resValue "string", "app_name", "WebSiteApp"
+            buildConfigField 'String', 'URL', '"http://haracters.ru"'
+            resValue "string", "app_name", "Характер"
         }
-        vk {
+        into {
             dimension "releaseType"
-            applicationId "ru.lopav.kzn.vkweb"
-            buildConfigField 'String', 'URL', '"http://vk.com"'
-            resValue "string", "app_name", "TheVk"
+            applicationId "ru.lopav.kzn.into"
+            buildConfigField 'String', 'URL', '"https://into-know.ru/"'
+            resValue "string", "app_name", "Интересно знать"
         }
     }
 }
