@@ -46,6 +46,213 @@ android {
             versionCode = 2
             versionName = "1.0.1"
         }
+        vinci {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.vinci"
+            buildConfigField 'String', 'URL', '"https://da-vinci.su/"'
+            resValue "string", "app_name", "Da Vinci"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        advantage {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.advantage"
+            buildConfigField 'String', 'URL', '"https://advantage-vk.ru/"'
+            resValue "string", "app_name", "Advantage"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        minut {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.minut"
+            buildConfigField 'String', 'URL', '"https://15minut.su/"'
+            resValue "string", "app_name", "Заходил 15 минут назад"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        fotohist {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.fotohist"
+            buildConfigField 'String', 'URL', '"https://fotohist.ru/"'
+            resValue "string", "app_name", "Истоия в фото"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        incredible {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.incredible"
+            buildConfigField 'String', 'URL', '"https://incredibleworldaroundus.ru/"'
+            resValue "string", "app_name", "Incredible world"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        bookwoorm {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.bookwoorm"
+            buildConfigField 'String', 'URL', '"https://bookwoorm.ru/"'
+            resValue "string", "app_name", "Книжный червь"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        likefakt {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.likefakt"
+            buildConfigField 'String', 'URL', '"https://likefakt.ru/"'
+            resValue "string", "app_name", "Like факты"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        drevnostmif {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.drevnostmif"
+            buildConfigField 'String', 'URL', '"https://drevnostmif.ru/"'
+            resValue "string", "app_name", "Древний мир"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        worldwomens {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.worldwomens"
+            buildConfigField 'String', 'URL', '"https://worldwomens.su/"'
+            resValue "string", "app_name", "Дневник жизни"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        nashe {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.nashe"
+            buildConfigField 'String', 'URL', '"https://nashe18.ru/"'
+            resValue "string", "app_name", "Наше 18+"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        realnosmewno {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.realnosmewno"
+            buildConfigField 'String', 'URL', '"https://realnosmewno.ru/"'
+            resValue "string", "app_name", "Улыбнуло"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        doypady {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.doypady"
+            buildConfigField 'String', 'URL', '"https://doypady.ru/"'
+            resValue "string", "app_name", "Смех до упаду"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        tophumora {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.tophumora"
+            buildConfigField 'String', 'URL', '"https://tophumora.ru/"'
+            resValue "string", "app_name", "Чёрный юмор"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        lemonsour {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.lemonsour"
+            buildConfigField 'String', 'URL', '"https://lemonsour.ru/"'
+            resValue "string", "app_name", "Лимон"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        ostrjak {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.ostrjak"
+            buildConfigField 'String', 'URL', '"https://ostrjak.ru/"'
+            resValue "string", "app_name", "Остряк"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        mytkiru {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.mytkiru"
+            buildConfigField 'String', 'URL', '"https://mytkiru.ru/"'
+            resValue "string", "app_name", "Пацанское дело"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        kosiach {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.kosiach"
+            buildConfigField 'String', 'URL', '"https://kosiach.ru/"'
+            resValue "string", "app_name", "Косяч"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        oprosa {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.oprosa"
+            buildConfigField 'String', 'URL', '"https://2oprosa.su/"'
+            resValue "string", "app_name", "Что бы ты выбрал"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        discoveryvk {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.discoveryvk"
+            buildConfigField 'String', 'URL', '"https://discoveryvk.ru/"'
+            resValue "string", "app_name", "Discovery"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        ideasforlifevk {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.ideasforlifevk"
+            buildConfigField 'String', 'URL', '"https://ideasforlifevk.ru/"'
+            resValue "string", "app_name", "IDEAS FOR LIFE"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        itaksodet {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.itaksodet"
+            buildConfigField 'String', 'URL', '"https://itaksodet.ru/"'
+            resValue "string", "app_name", "И так сойдёт!"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        happypatric {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.into"
+            buildConfigField 'String', 'URL', '"https://happypatric.ru"'
+            resValue "string", "app_name", "Весёлый Патрик"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
+        into {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.dtpzhest"
+            buildConfigField 'String', 'URL', '"https://dtpzhest.ru"'
+            resValue "string", "app_name", "ДТП|Аварии"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/into"
+            ]
+        }
     }
 }
 
