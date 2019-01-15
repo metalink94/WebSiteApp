@@ -253,6 +253,15 @@ android {
                     appIcon: "@mipmap/into"
             ]
         }
+        woowloto {
+            dimension "releaseType"
+            applicationId "ru.lopav.kzn.woowloto"
+            buildConfigField 'String', 'URL', '"https://dtpzhest.ru"'
+            resValue "string", "app_name", "Woowloto"
+            manifestPlaceholders = [
+                    appIcon: "@mipmap/icon"
+            ]
+        }
     }
 }
 
