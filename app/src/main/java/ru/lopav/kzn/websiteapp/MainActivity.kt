@@ -1,13 +1,16 @@
 package ru.lopav.kzn.websiteapp
 
-import android.support.v7.app.AppCompatActivity
+import android.app.NotificationManager
+import android.content.Context
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity: AppCompatActivity() {
+
+class MainActivity : AppCompatActivity() {
 
     var currentUrl: String? = BuildConfig.URL // set URL!!!
 
@@ -20,6 +23,7 @@ class MainActivity: AppCompatActivity() {
             load()
         }
     }
+
 
     private fun initWebView() {
         webView.webChromeClient = WebChromeClient()
