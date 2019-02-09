@@ -47,6 +47,17 @@ android {
             versionCode = 4
             versionName = "1.0"
         }
+        rabbetWeb {
+            dimension "releaseType"
+            applicationId "com.web.four.rabet"
+            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=251"'
+            resValue "string", "app_name", "4RabetWeb"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/icon_main"
+            ]
+            versionCode = 4
+            versionName = "1.0"
+        }
         saturnbet {
             dimension "releaseType"
             applicationId "ru.lopav.saturn.bet"
