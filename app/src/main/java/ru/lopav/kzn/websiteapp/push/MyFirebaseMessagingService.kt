@@ -1,4 +1,4 @@
-package ru.lopav.kzn.websiteapp
+package ru.lopav.kzn.websiteapp.push
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -12,6 +12,8 @@ import android.util.Log
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import ru.lopav.kzn.websiteapp.web.MainActivity
+import ru.lopav.kzn.websiteapp.R
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 

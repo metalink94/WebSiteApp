@@ -1,4 +1,4 @@
-package ru.lopav.kzn.websiteapp
+package ru.lopav.kzn.websiteapp.push
 
 import android.util.Log
 
