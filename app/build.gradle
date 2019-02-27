@@ -27,28 +27,6 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        rabbet1 {
-            dimension "releaseType"
-            applicationId "ru.lopav.rabbet.one"
-            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=143"'
-            resValue "string", "app_name", "4Rabet"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/icon_main"
-            ]
-            versionCode = 6
-            versionName = "1.1"
-        }
-        rabbet2 {
-            dimension "releaseType"
-            applicationId "ru.lopav.rabbet.two"
-            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=144"'
-            resValue "string", "app_name", "4Rabet"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/icon_main"
-            ]
-            versionCode = 6
-            versionName = "1.1"
-        }
         rabetWebP {
             dimension "releaseType"
             applicationId "com.web.push.rabet"
@@ -64,6 +42,17 @@ android {
             dimension "releaseType"
             applicationId "com.second.push.rabet"
             buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=264&s1=pril1"'
+            resValue "string", "app_name", "4Rabet"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/icon_main"
+            ]
+            versionCode = 1
+            versionName = "1.0"
+        }
+        rabetWebP3 {
+            dimension "releaseType"
+            applicationId "com.third.push.rabet"
+            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=133"'
             resValue "string", "app_name", "4Rabet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
