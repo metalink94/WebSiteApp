@@ -36,7 +36,7 @@ android {
                     appIcon: "@drawable/icon_main"
             ]
             versionCode = 5
-            versionName = "1.1.3"
+            versionName = "1.2"
         }
         rabetWebP2 {
             dimension "releaseType"
@@ -47,7 +47,7 @@ android {
                     appIcon: "@drawable/icon_main"
             ]
             versionCode = 1
-            versionName = "1.0"
+            versionName = "1.1"
         }
         rabetWebP3 {
             dimension "releaseType"
@@ -58,7 +58,7 @@ android {
                     appIcon: "@drawable/icon_main"
             ]
             versionCode = 1
-            versionName = "1.0"
+            versionName = "1.2.1"
         }
     }
 }

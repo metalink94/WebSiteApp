@@ -7,5 +7,7 @@ object Constants {
     val DATABASE_URL = "url"
 
     val FIRST_APP = "com.web.push.rabet"
+    val SECOND_APP = "com.second.push.rabet"
     val DATABASE_URL_2 = "urlSecond"
+    val DATABASE_URL_3 = "urlThird"
 }

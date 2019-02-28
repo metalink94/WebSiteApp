@@ -24,11 +24,7 @@ class SplashScreen : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.value != null) {
                     val isFinish = p0.child(Constants.DATABASE_IS_FINISH).value as Boolean
-                    val webUrl = if (BuildConfig.APPLICATION_ID == Constants.FIRST_APP) {
-                        p0.child(Constants.DATABASE_URL).value as String?
-                    } else {
-                        p0.child(Constants.DATABASE_URL_2).value as String?
-                    }
+                    val webUrl = setUrl(p0)
                     if (isFinish) {
                         finishApp()
                     } else {
@@ -43,6 +39,14 @@ class SplashScreen : AppCompatActivity() {
                 showMainScreen(null)
             }
         })
+    }
+
+    private fun setUrl(dataSnapshot: DataSnapshot): String? {
+        return when(BuildConfig.APPLICATION_ID) {
+            Constants.FIRST_APP -> dataSnapshot.child(Constants.DATABASE_URL).value as String?
+            Constants.SECOND_APP -> dataSnapshot.child(Constants.DATABASE_URL_2).value as String?
+            else -> dataSnapshot.child(Constants.DATABASE_URL_3).value as String?
+        }
     }
 
     private fun finishApp() {
