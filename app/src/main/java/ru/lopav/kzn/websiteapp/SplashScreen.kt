@@ -1,6 +1,7 @@
 package ru.lopav.kzn.websiteapp
 
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.google.firebase.database.DataSnapshot
@@ -15,7 +16,10 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        checkDatabase()
+//        checkDatabase()
+        Handler().postDelayed({
+            showMainScreen(BuildConfig.URL)
+        }, 1200)
     }
 
     private fun checkDatabase() {
