@@ -12,6 +12,7 @@ import android.util.Log
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
+import ru.lopav.kzn.websiteapp.BuildConfig
 import ru.lopav.kzn.websiteapp.web.MainActivity
 import ru.lopav.kzn.websiteapp.R
 
@@ -48,7 +49,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         val channelId = getString(R.string.default_notification_channel_id)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-                .setSmallIcon(R.drawable.icon_main)
+                .setSmallIcon(getIcon())
                 .setContentTitle(messageTitle)
                 .setContentText(messageBody)
                 .setAutoCancel(true)
@@ -66,6 +67,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
 
         notificationManager.notify(0 /* ID of notification */, notificationBuilder.build())
+    }
+
+    private fun getIcon(): Int {
+        return if (BuildConfig.APPLICATION_ID == Constants.FIRST_APP) {
+            R.drawable.icon_1
+        } else {
+            R.drawable.icon_2
+        }
     }
 
     companion object {
