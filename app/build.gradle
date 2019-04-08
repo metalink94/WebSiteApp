@@ -27,22 +27,22 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        j9cs7 {
+        dZpRRg {
             dimension "releaseType"
-            applicationId "com.united.push.j9cs7"
-            buildConfigField 'String', 'URL', '"http://cpaship.ru/?4j9Cs7"'
-            resValue "string", "app_name", "Slots"
+            applicationId "com.united.push.dZpRRg"
+            buildConfigField 'String', 'URL', '"http://cpaship.ru/?dZpRRg"'
+            resValue "string", "app_name", "Trading"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_1"
             ]
             versionCode = 1
             versionName = "1.0"
         }
-        wqs6cs {
+        CK1pd {
             dimension "releaseType"
-            applicationId "com.united.push.wqs6cs"
-            buildConfigField 'String', 'URL', '"http://cpaship.ru/?wQS6cs"'
-            resValue "string", "app_name", "Slots"
+            applicationId "com.united.push.CK1pd"
+            buildConfigField 'String', 'URL', '"http://cpaship.ru/?4CK1pd"'
+            resValue "string", "app_name", "Trading"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_2"
             ]
