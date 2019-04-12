@@ -44,7 +44,8 @@ class SplashScreen : AppCompatActivity() {
     private fun setUrl(dataSnapshot: DataSnapshot): String? {
         return when(BuildConfig.APPLICATION_ID) {
             Constants.FIRST_APP -> dataSnapshot.child(Constants.DATABASE_URL).value as String?
-            else -> dataSnapshot.child(Constants.DATABASE_URL_2).value as String?
+            Constants.SECOND_APP -> dataSnapshot.child(Constants.DATABASE_URL_2).value as String?
+            else -> dataSnapshot.child(Constants.DATABASE_URL_3).value as String?
         }
     }
 

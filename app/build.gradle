@@ -27,22 +27,33 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        rabet99 {
+        mob1 {
             dimension "releaseType"
-            applicationId "com.app.push.id99"
-            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=99"'
-            resValue "string", "app_name", "4Rabet"
+            applicationId "com.app.push.mob1"
+            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=16&s1=mob1"'
+            resValue "string", "app_name", "UranBet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
             ]
             versionCode = 1
             versionName = "1.0"
         }
-        rabet72 {
+        mob2 {
             dimension "releaseType"
-            applicationId "com.app.push.id72"
-            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=72"'
-            resValue "string", "app_name", "4Rabet"
+            applicationId "com.app.push.mob2"
+            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=16&s1=mob2"'
+            resValue "string", "app_name", "UranBet"
+            manifestPlaceholders = [
+                    appIcon: "@drawable/icon_main"
+            ]
+            versionCode = 1
+            versionName = "1.0"
+        }
+        mob3 {
+            dimension "releaseType"
+            applicationId "com.app.push.mob3"
+            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=16&s1=mob3"'
+            resValue "string", "app_name", "UranBet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
             ]
