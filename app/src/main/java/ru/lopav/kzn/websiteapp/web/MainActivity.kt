@@ -1,4 +1,4 @@
-package ru.lopav.kzn.websiteapp
+package ru.lopav.kzn.websiteapp.web
 
 import android.Manifest
 import android.annotation.TargetApi
@@ -6,19 +6,23 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.util.Log
+import android.view.WindowManager
 import android.webkit.*
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.lopav.kzn.websiteapp.BuildConfig
+import ru.lopav.kzn.websiteapp.R
 
 class MainActivity: AppCompatActivity() {
 
-    var currentUrl: String? = BuildConfig.URL
+    var currentUrl: String = BuildConfig.URL
     private var uploadMessage: ValueCallback<Array<Uri>>? = null
     private var mUploadMessage: ValueCallback<Uri>? = null
     private val PICK_FROM_GALLERY = 1
@@ -114,9 +118,14 @@ class MainActivity: AppCompatActivity() {
                 swipeRefresh.isRefreshing = false
             }
         }
-        webView.clearCache(true)
+        CookieSyncManager.createInstance(this)
+        val cookieManager = CookieManager.getInstance()
+        cookieManager.setAcceptCookie(true)
+
+//        webView.clearCache(true)
         webView.clearHistory()
         webView.setInitialScale(1)
+        webView.settings.setAppCacheEnabled(true)
         webView.settings.javaScriptEnabled = true
         webView.settings.loadWithOverviewMode = true
         webView.settings.useWideViewPort = true
@@ -127,6 +136,16 @@ class MainActivity: AppCompatActivity() {
         webView.settings.displayZoomControls = false
         webView.settings.domStorageEnabled = true
         load()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration?) {
+        super.onConfigurationChanged(newConfig)
+        if (newConfig?.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+        else {
+            window.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
     }
 
     private fun load() {
@@ -149,15 +168,15 @@ class MainActivity: AppCompatActivity() {
                 data.data
             }
             mUploadMessage?.onReceiveValue(result);
-            mUploadMessage = null;
+            mUploadMessage = null
         }
     }
 
     override fun onBackPressed() {
         if (webView.canGoBack()) {
-            webView.goBack();
+            webView.goBack()
         } else {
-            super.onBackPressed();
+            super.onBackPressed()
         }
     }
 

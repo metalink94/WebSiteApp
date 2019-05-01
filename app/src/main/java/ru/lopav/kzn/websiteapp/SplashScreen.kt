@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import ru.lopav.kzn.websiteapp.web.MainActivity
 
 class SplashScreen: AppCompatActivity() {
 

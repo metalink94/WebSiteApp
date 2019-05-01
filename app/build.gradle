@@ -25,39 +25,6 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        rabbet1 {
-            dimension "releaseType"
-            applicationId "ru.lopav.rabbet.one"
-            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=143"'
-            resValue "string", "app_name", "4Rabet"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/icon_main"
-            ]
-            versionCode = 4
-            versionName = "1.0"
-        }
-        rabbet2 {
-            dimension "releaseType"
-            applicationId "ru.lopav.rabbet.two"
-            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=144"'
-            resValue "string", "app_name", "4Rabet"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/icon_main"
-            ]
-            versionCode = 4
-            versionName = "1.0"
-        }
-        rabbetWeb {
-            dimension "releaseType"
-            applicationId "com.web.four.rabet"
-            buildConfigField 'String', 'URL', '"http://bet4ra.com/go.php?id=251"'
-            resValue "string", "app_name", "4RabetWeb"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/icon_main"
-            ]
-            versionCode = 4
-            versionName = "1.0"
-        }
         saturnbet {
             dimension "releaseType"
             applicationId "ru.lopav.saturn.bet"
@@ -66,8 +33,8 @@ android {
             manifestPlaceholders = [
                     appIcon: "@drawable/saturnbet"
             ]
-            versionCode = 6
-            versionName = "1.1"
+            versionCode = 8
+            versionName = "1.2"
         }
     }
 }
@@ -79,4 +46,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-messaging:17.5.0'
 }
+apply plugin: 'com.google.gms.google-services'
