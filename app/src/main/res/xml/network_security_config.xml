@@ -12,6 +12,6 @@
         </trust-anchors>
     </debug-overrides>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">bet4ra.com</domain>
+        <domain includeSubdomains="true">bit.ly</domain>
     </domain-config>
 </network-security-config>

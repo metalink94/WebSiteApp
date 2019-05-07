@@ -7,6 +7,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.activity_splash.*
 import ru.lopav.kzn.websiteapp.push.Constants
 import ru.lopav.kzn.websiteapp.web.MainActivity
 
@@ -15,7 +16,16 @@ class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        checkIcon()
         checkDatabase()
+    }
+
+    private fun checkIcon() {
+        if (BuildConfig.APPLICATION_ID == Constants.FIRST_APP) {
+            icon.setImageResource(R.drawable.olymp)
+        } else {
+            icon.setImageResource(R.drawable.iq)
+        }
     }
 
     private fun checkDatabase() {
