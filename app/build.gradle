@@ -27,10 +27,10 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        V5Ju1O {
+        JlqIl3 {
             dimension "releaseType"
-            applicationId "com.app.olymp.V5Ju1O"
-            buildConfigField 'String', 'URL', '"https://bit.ly/2V5Ju1O"'
+            applicationId "com.app.olymp.JlqIl3"
+            buildConfigField 'String', 'URL', '"https://bit.ly/2JlqIl3"'
             resValue "string", "app_name", "Olymp Trade"
             manifestPlaceholders = [
                     appIcon: "@drawable/olymp"
@@ -38,10 +38,10 @@ android {
             versionCode = 1
             versionName = "1.0"
         }
-        M1mgcT {
+        Y8jJA7 {
             dimension "releaseType"
-            applicationId "com.app.iq.M1mgcT"
-            buildConfigField 'String', 'URL', '"https://bit.ly/2M1mgcT"'
+            applicationId "com.app.iq.Y8jJA7"
+            buildConfigField 'String', 'URL', '"https://bit.ly/2Y8jJA7"'
             resValue "string", "app_name", "Iq option"
             manifestPlaceholders = [
                     appIcon: "@drawable/iq"
