@@ -27,24 +27,13 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        JlqIl3 {
+        V6EOsz {
             dimension "releaseType"
-            applicationId "com.app.olymp.JlqIl3"
-            buildConfigField 'String', 'URL', '"https://bit.ly/2JlqIl3"'
+            applicationId "com.app.olymp.V6EOsz"
+            buildConfigField 'String', 'URL', '"https://bit.ly/2V6EOsz"'
             resValue "string", "app_name", "Olymp Trade"
             manifestPlaceholders = [
                     appIcon: "@drawable/olymp"
-            ]
-            versionCode = 1
-            versionName = "1.0"
-        }
-        Y8jJA7 {
-            dimension "releaseType"
-            applicationId "com.app.iq.Y8jJA7"
-            buildConfigField 'String', 'URL', '"https://bit.ly/2Y8jJA7"'
-            resValue "string", "app_name", "Iq option"
-            manifestPlaceholders = [
-                    appIcon: "@drawable/iq"
             ]
             versionCode = 1
             versionName = "1.0"
