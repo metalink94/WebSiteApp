@@ -25,13 +25,13 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        saturnbet {
+        guessteam {
             dimension "releaseType"
-            applicationId "ru.lopav.saturn.bet"
-            buildConfigField 'String', 'URL', '"https://web-f.ru/FYSPBJ"'
-            resValue "string", "app_name", "Saturnbet"
+            applicationId "ru.lopav.gues.steam"
+            buildConfigField 'String', 'URL', '"https://guessteam.com"'
+            resValue "string", "app_name", "Guessteam"
             manifestPlaceholders = [
-                    appIcon: "@drawable/saturnbet"
+                    appIcon: "@drawable/icon_main"
             ]
             versionCode = 8
             versionName = "1.2"
@@ -47,6 +47,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-core:16.0.8'
-    implementation 'com.google.firebase:firebase-messaging:17.5.0'
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
 }
 apply plugin: 'com.google.gms.google-services'
