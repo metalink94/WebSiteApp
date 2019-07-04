@@ -27,14 +27,14 @@ android {
     productFlavors {
         guessteam {
             dimension "releaseType"
-            applicationId "ru.lopav.gues.steam"
-            buildConfigField 'String', 'URL', '"https://guessteam.com"'
-            resValue "string", "app_name", "Guessteam"
+            applicationId "com.app.saturn.bet"
+            buildConfigField 'String', 'URL', '"https://saturn-bet.net/"'
+            resValue "string", "app_name", "Saturn-Bet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
             ]
-            versionCode = 8
-            versionName = "1.2"
+            versionCode = 1
+            versionName = "1.0.0"
         }
     }
 }
@@ -48,5 +48,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.google.firebase:firebase-database:18.0.0'
 }
 apply plugin: 'com.google.gms.google-services'

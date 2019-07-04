@@ -32,7 +32,7 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        currentUrl = intent.getStringExtra(KEY_URL)
+        currentUrl = intent.getStringExtra(KEY_URL)
         checkPermissions()
         initWebView()
         swipeRefresh.setOnRefreshListener {

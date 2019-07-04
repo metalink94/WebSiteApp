@@ -8,5 +8,6 @@
     <string name="default_notification_channel_name" translatable="true">Weather</string>
     <string name="msg_subscribe_failed">Failed to subscribe to weather topic</string>
     <string name="fcm_message">FCM Message</string>
+    <string name="key_url">url</string>
 
 </resources>
