@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "ru.lopav.kzn.websiteapp"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -25,11 +25,11 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        guessteam {
+        uransite {
             dimension "releaseType"
-            applicationId "com.app.saturn.bet"
-            buildConfigField 'String', 'URL', '"https://saturn-bet.net/"'
-            resValue "string", "app_name", "Saturn-Bet"
+            applicationId "com.app.uranbet.site"
+            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=101&s1=site"'
+            resValue "string", "app_name", "UranBet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
             ]
@@ -43,9 +43,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
     implementation 'com.google.firebase:firebase-core:17.0.0'
     implementation 'com.google.firebase:firebase-messaging:19.0.1'
     implementation 'com.google.firebase:firebase-database:18.0.0'

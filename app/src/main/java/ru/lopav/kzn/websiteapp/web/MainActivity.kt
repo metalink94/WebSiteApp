@@ -121,7 +121,7 @@ class MainActivity: AppCompatActivity() {
         CookieSyncManager.createInstance(this)
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
-
+        cookieManager.setAcceptThirdPartyCookies(webView, true)
 //        webView.clearCache(true)
         webView.clearHistory()
         webView.setInitialScale(1)
