@@ -23,7 +23,7 @@ import android.view.WindowManager
 
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
 
     var currentUrl: String = BuildConfig.URL
     private var uploadMessage: ValueCallback<Array<Uri>>? = null
@@ -124,7 +124,7 @@ class MainActivity : AppCompatActivity() {
         CookieSyncManager.createInstance(this)
         val cookieManager = CookieManager.getInstance()
         cookieManager.setAcceptCookie(true)
-
+        cookieManager.setAcceptThirdPartyCookies(webView, true)
 //        webView.clearCache(true)
         webView.clearHistory()
         webView.setInitialScale(1)
@@ -171,15 +171,15 @@ class MainActivity : AppCompatActivity() {
                 data.data
             }
             mUploadMessage?.onReceiveValue(result);
-            mUploadMessage = null;
+            mUploadMessage = null
         }
     }
 
     override fun onBackPressed() {
         if (webView.canGoBack()) {
-            webView.goBack();
+            webView.goBack()
         } else {
-            super.onBackPressed();
+            super.onBackPressed()
         }
     }
 
