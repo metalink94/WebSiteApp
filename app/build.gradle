@@ -25,10 +25,10 @@ android {
     flavorDimensions "releaseType"
 
     productFlavors {
-        uransite {
+        urantraff {
             dimension "releaseType"
-            applicationId "com.app.uranbet.site"
-            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=101&s1=site"'
+            applicationId "com.app.uranbet.traff2"
+            buildConfigField 'String', 'URL', '"https://urantraff.com/go.php?id=101&s1=traff2"'
             resValue "string", "app_name", "UranBet"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
