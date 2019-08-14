@@ -1,7 +1,7 @@
 package ru.lopav.kzn.websiteapp
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -23,13 +23,8 @@ class SplashScreen : AppCompatActivity() {
         database.reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.value != null) {
-                    val isFinish = p0.child(Constants.DATABASE_IS_FINISH).value as Boolean
                     val webUrl = setUrl(p0)
-                    if (isFinish) {
-                        finishApp()
-                    } else {
-                        showMainScreen(webUrl)
-                    }
+                    showMainScreen(webUrl)
                 }
                 Log.d("DataBase", "get database ${p0.value}")
             }

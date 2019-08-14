@@ -10,8 +10,8 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.webkit.*
 import android.widget.Toast
@@ -28,9 +28,6 @@ class MainActivity: AppCompatActivity() {
     var currentUrl: String = BuildConfig.URL
     private var uploadMessage: ValueCallback<Array<Uri>>? = null
     private var mUploadMessage: ValueCallback<Uri>? = null
-    private val PICK_FROM_GALLERY = 1
-    private val PICK_FROM_GALLERY_2 = 2
-    private val PICK_FROM_GALLERY_3 = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +48,7 @@ class MainActivity: AppCompatActivity() {
             ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE),
-                    PICK_FROM_GALLERY
+                    Companion.PICK_FROM_GALLERY
             )
         }
     }
@@ -75,7 +72,7 @@ class MainActivity: AppCompatActivity() {
                     intent = fileChooserParams?.createIntent()
                 }
                 try {
-                    startActivityForResult(intent, PICK_FROM_GALLERY_2)
+                    startActivityForResult(intent, Companion.PICK_FROM_GALLERY_2)
                 } catch (e: ActivityNotFoundException) {
                     uploadMessage = null
                     Toast.makeText(applicationContext, "Cannot Open File Chooser", Toast.LENGTH_LONG).show()
@@ -157,13 +154,13 @@ class MainActivity: AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == PICK_FROM_GALLERY_2) {
+        if (requestCode == Companion.PICK_FROM_GALLERY_2) {
             if (uploadMessage == null) return
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 uploadMessage?.onReceiveValue(WebChromeClient.FileChooserParams.parseResult(resultCode, data))
             }
             uploadMessage = null
-        } else if (requestCode == PICK_FROM_GALLERY_3) {
+        } else if (requestCode == Companion.PICK_FROM_GALLERY_3) {
             if (null == mUploadMessage) return
             val result = if (data == null || resultCode != RESULT_OK) {
                 null
@@ -189,6 +186,10 @@ class MainActivity: AppCompatActivity() {
         fun getInstance(context: Context, url: String?): Intent =
                 Intent(context, MainActivity::class.java)
                         .putExtra(KEY_URL, url)
+
+        private const val PICK_FROM_GALLERY_3 = 3
+        private const val PICK_FROM_GALLERY_2 = 2
+        private const val PICK_FROM_GALLERY = 1
     }
 }
 
