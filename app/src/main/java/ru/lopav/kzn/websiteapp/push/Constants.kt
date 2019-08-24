@@ -6,7 +6,7 @@ object Constants {
     val DATABASE_IS_FINISH = "isFinish"
     val DATABASE_URL = "url"
 
-    val FIRST_APP = "com.web.bet.rabet"
+    val FIRST_APP = "com.four.rabet.app"
     val SECOND_APP = "com.second.push.rabet"
     val DATABASE_URL_2 = "urlSecond"
     val DATABASE_URL_3 = "urlThird"
