@@ -29,11 +29,11 @@ android {
     productFlavors {
         FourRabet {
             dimension "releaseType"
-            applicationId "com.after.break.football"
-            buildConfigField 'String', 'URL', '"https://afterbreak.ru/t6zDDH"'
+            applicationId "com.table.bort.sport"
+            buildConfigField 'String', 'URL', '"https://tablebort.ru/p5X3CL"'
             resValue "string", "app_name", "Football Prediction"
             manifestPlaceholders = [
-                    appIcon: "@drawable/sb_icon_1"
+                    appIcon: "@drawable/sb_icon_3"
             ]
             versionCode = 1
             versionName = "1.0.0"

@@ -12,6 +12,6 @@
         </trust-anchors>
     </debug-overrides>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">afterbreak.ru</domain>
+        <domain includeSubdomains="true">tablebort.ru</domain>
     </domain-config>
 </network-security-config>
