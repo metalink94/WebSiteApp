@@ -4,12 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="#121921">
 
     <ImageView
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_splash"/>
+        android:layout_margin="64dp"
+        app:srcCompat="@drawable/sb_icon_1"/>
 
 </RelativeLayout>

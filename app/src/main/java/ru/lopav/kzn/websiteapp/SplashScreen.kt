@@ -23,6 +23,10 @@ class SplashScreen : AppCompatActivity() {
         database.reference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.value != null) {
+                    if (p0.child(Constants.DATABASE_IS_FINISH).value as? Boolean == true) {
+                        finishApp()
+                        return
+                    }
                     val webUrl = setUrl(p0)
                     showMainScreen(webUrl)
                 }
