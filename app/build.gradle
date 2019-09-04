@@ -29,8 +29,8 @@ android {
     productFlavors {
         FourRabet {
             dimension "releaseType"
-            applicationId "com.four.rabet.app"
-            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=250"'
+            applicationId "com.rabet.bet"
+            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=1596"'
             resValue "string", "app_name", "4RabetApp"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
