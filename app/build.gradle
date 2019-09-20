@@ -29,8 +29,8 @@ android {
     productFlavors {
         FourRabet {
             dimension "releaseType"
-            applicationId "com.rabet.betra"
-            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=1607"'
+            applicationId "com.go.betra"
+            buildConfigField 'String', 'URL', '"https://bet4ra.com/go.php?id=1730"'
             resValue "string", "app_name", "4RabetApp"
             manifestPlaceholders = [
                     appIcon: "@drawable/icon_main"
@@ -45,10 +45,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'com.google.firebase:firebase-core:17.0.1'
-    implementation 'com.google.firebase:firebase-database:18.0.1'
-    implementation 'com.google.firebase:firebase-messaging:19.0.1'
-    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-database:19.1.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

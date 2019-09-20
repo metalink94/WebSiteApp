@@ -19,15 +19,16 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     private var notificationManager: NotificationManager? = null
 
-    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
-        Log.d("FCM Service", "From: " + remoteMessage?.from)
-        Log.d("FCM Service", "Notification Message Body: " + remoteMessage?.notification?.body)
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+        Log.d("FCM Service", "From: " + remoteMessage.from)
+        Log.d("FCM Service", "Notification Message Body: " + remoteMessage.notification?.body)
         var title = getString(R.string.app_name)
         var description = "PushNotification"
-        remoteMessage?.notification?.body?.let {
+        remoteMessage.notification?.body?.let {
             description = it
         }
-        remoteMessage?.notification?.title?.let {
+        remoteMessage.notification?.title?.let {
             title = it
         }
         sendNotification(title, description)
